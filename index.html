@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Start of  Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=7668c976-0fb7-47ee-8740-3e9115bdb10f"> </script>
+<!-- End of  Zendesk Widget script -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Pogo Games sign in account guide and support" />
-<title>Pogo Games Sign In Account</title>
+<title>Pogo Games Sign In Account | How To Sign In Pogo Games?</title>
+<meta name="description" content="PPogo Games Sign In Account made easy! Learn how to quickly and securely sign in to Pogo Games and start playing your favorite online games today. />
+<meta name="keywords" content="pogo games sign in, pogo games account, pogo games sign in account, pogo games account sign in, pogo games sign in my account, sign in my pogo games account, sign in pogo games, how to sign in pogo games" />
 <style>
   /* Reset */
   * {
@@ -249,10 +254,10 @@
 <header>
   <div class="header-inner">
     <div class="logo" aria-label="Pogo Games logo">Pogo<span style="color:#ffd700;">Games</span></div>
-    <div class="top-buttons" role="navigation" aria-label="Top navigation buttons">
-      <button type="button" aria-label="Login">Login</button>
-      <button type="button" aria-label="Support">Support</button>
-    </div>
+   <div class="top-buttons" role="navigation" aria-label="Top navigation buttons">
+  <button type="button" aria-label="Login" id="loginBtn">Login</button>
+  <button type="button" aria-label="Support" id="supportBtn">Support</button>
+</div>
   </div>
 </header>
 
@@ -425,6 +430,15 @@
     }, {threshold: 0.15});
 
     items.forEach(item => observer.observe(item));
+  });
+  
+  
+  document.getElementById('loginBtn').addEventListener('click', () => {
+    window.location.href = 'https://pogoclubgames.net';
+  });
+
+  document.getElementById('supportBtn').addEventListener('click', () => {
+    window.location.href = 'https://getchatsupport.live/';
   });
 </script>
 
