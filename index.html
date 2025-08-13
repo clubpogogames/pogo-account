@@ -147,6 +147,101 @@
       font-size: 0.9rem;
     }
   }
+  
+  
+  .services {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .services-header p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 900px) {
+    .service-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .service-item {
+    background: white;
+    padding: 30px 20px;
+    border-bottom: 4px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+    cursor: default;
+    text-align: center;
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .service-item.visible {
+    animation: fadeUp 0.6s forwards;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .service-item:hover {
+    border-bottom-color: #0078d7;
+    box-shadow: 0 8px 20px rgb(0 120 215 / 0.2);
+    transform: translateY(-5px);
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    fill: #0078d7;
+    transition: fill 0.3s ease;
+  }
+
+  .service-item:hover .service-icon {
+    fill: #004a9f;
+  }
+
+  .service-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #004a9f;
+  }
+
+  .service-desc {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
 </style>
 </head>
 <body>
@@ -165,6 +260,65 @@
   <h1>Pogo Games Sign In Account</h1>
   <p>Welcome to the ultimate Pogo Games sign in account guide. Whether you're new or returning, signing into your Pogo Games account unlocks a world of fun, exciting games and endless entertainment. Learn how to navigate the sign in process and manage your account with ease.</p>
 </section>
+
+<section class="services" aria-label="Services Section">
+  <div class="service-grid">
+    <article class="service-item" tabindex="0" aria-label="Account Management Service">
+      <svg class="service-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="20" r="12" />
+        <path d="M16 52c0-8 32-8 32 0v4H16v-4z" />
+      </svg>
+      <h2 class="service-title">Account Management</h2>
+      <p class="service-desc">Easily manage your Pogo Games sign in account details, update preferences, and customize your profile to fit your gaming style.</p>
+    </article>
+
+    <article class="service-item" tabindex="0" aria-label="Security Features Service">
+      <svg class="service-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect x="18" y="24" width="28" height="20" rx="4" ry="4"/>
+        <circle cx="32" cy="34" r="6"/>
+      </svg>
+      <h2 class="service-title">Security Features</h2>
+      <p class="service-desc">Protect your account with advanced security measures, including strong passwords, two-factor authentication, and account monitoring.</p>
+    </article>
+
+    <article class="service-item" tabindex="0" aria-label="Game Progress Sync Service">
+      <svg class="service-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path d="M8 32h48M32 8v48" stroke="#0078d7" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <h2 class="service-title">Game Progress Sync</h2>
+      <p class="service-desc">Keep your game progress synchronized across all your devices, so you never lose your place in your favorite Pogo Games.</p>
+    </article>
+
+    <article class="service-item" tabindex="0" aria-label="Community Interaction Service">
+      <svg class="service-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <circle cx="20" cy="24" r="8"/>
+        <circle cx="44" cy="24" r="8"/>
+        <path d="M12 48c0-8 40-8 40 0v4H12v-4z"/>
+      </svg>
+      <h2 class="service-title">Community Interaction</h2>
+      <p class="service-desc">Join discussions, chat with friends, and take part in tournaments to enjoy the lively Pogo Games community.</p>
+    </article>
+
+    <article class="service-item" tabindex="0" aria-label="Support Service">
+      <svg class="service-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="32" r="30" stroke="#0078d7" stroke-width="4" fill="none"/>
+        <path d="M32 14v18" stroke="#0078d7" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="32" cy="44" r="2" fill="#0078d7"/>
+      </svg>
+      <h2 class="service-title">Support</h2>
+      <p class="service-desc">Access responsive and helpful customer support anytime to resolve issues with your Pogo Games sign in account.</p>
+    </article>
+
+    <article class="service-item" tabindex="0" aria-label="Rewards and Achievements Service">
+      <svg class="service-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <polygon points="32,6 39,24 58,24 42,37 48,56 32,44 16,56 22,37 6,24 25,24" />
+      </svg>
+      <h2 class="service-title">Rewards and Achievements</h2>
+      <p class="service-desc">Earn badges, unlock rewards, and celebrate your gaming achievements through your Pogo Games sign in account.</p>
+    </article>
+  </div>
+</section>
+
 
 <main class="container" role="main">
 
@@ -256,6 +410,23 @@
   </article>
 
 </main>
+
+<script>
+  // IntersectionObserver for fade-up animation on scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.service-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.15});
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
 
 </body>
 </html>
